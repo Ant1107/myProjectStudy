@@ -1,18 +1,13 @@
-"use strict";
 
-let test = alert(Hello);
-let numberOfFilms = prompt("Сколько фильмов вы уже посмотрели?", "number");
+let numberOfFilms = prompt("Сколько фильмов вы уже посмотрели?");
 
-if (typeof +numberOfFilms == Number && +numberOfFilms <= 0) {
-    var personalMovieDB = {
-        count: numberOfFilms,
-        movies: {},
-        actors: {},
-        genres: [],
-        privat: false
-    };
-} else {
-    numberOfFilms = prompt("Вы ввели не корректное значение, введите число:");
-}
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-personalMovieDB.movies.prompt("Один из просмотренных ранее фильмов") = prompt("Оцените");
+personalMovieDB.movies[prompt("Один из последних фильмов")] = prompt("На сколько оцените его?");
+
