@@ -1,27 +1,17 @@
 "use strict";
 
-let number = 5;
-const leftBorderWight = 1;
+let numberOfFilms = prompt("Сколько фильмов вы уже посмотрели?");
 
-number = 10;
-console.log(number);
+if (typeof +numberOfFilms == Number && +numberOfFilms <= 0) {
+    var personalMovieDB = {
+        count: numberOfFilms,
+        movies: {},
+        actors: {},
+        genres: [],
+        privat: false
+    };
+} else {
+    numberOfFilms = prompt("Вы ввели не корректное значение, введите число:");
+}
 
-const obj = {
-    name: "John", 
-    age: "25",
-    isMarried: false
-};
-
-obj.name = 10;
-
-console.log(obj);
-
-const answers = [];
-console.log(answers.length);
-
-while (answers.length < 10) {
-    answers.push(prompt("Введите ваш вопрос"));    
-};
-alert(answers);
-console.log(answers);
-
+personalMovieDB.movies.prompt("Один из просмотренных ранее фильмов") = prompt("Во сколько оцените его?")
