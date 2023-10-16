@@ -1,6 +1,7 @@
 "use strict";
 
-let numberOfFilms = prompt("Сколько фильмов вы уже посмотрели?");
+let test = alert(Hello);
+let numberOfFilms = prompt("Сколько фильмов вы уже посмотрели?", "number");
 
 if (typeof +numberOfFilms == Number && +numberOfFilms <= 0) {
     var personalMovieDB = {
@@ -14,4 +15,4 @@ if (typeof +numberOfFilms == Number && +numberOfFilms <= 0) {
     numberOfFilms = prompt("Вы ввели не корректное значение, введите число:");
 }
 
-personalMovieDB.movies.prompt("Один из просмотренных ранее фильмов") = prompt("Во сколько оцените его?")
+personalMovieDB.movies.prompt("Один из просмотренных ранее фильмов") = prompt("Оцените");
