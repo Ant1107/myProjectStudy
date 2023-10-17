@@ -14,3 +14,4 @@ personalMovieDB.movies[prompt("Один из последних фильмов")
 
 
 console.log(personalMovieDB);
+
