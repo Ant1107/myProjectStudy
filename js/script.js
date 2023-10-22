@@ -6,15 +6,15 @@ const personalMovieDB = {
     actors: {},
     genres: [],
     privat: false
-};
+}
 
 function start() {
     numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", '');
     while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
         numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", '');
-    };
+    }
     personalMovieDB.count = numberOfFilms;
-};
+}
 
 function rememberMyFilms() {
 
@@ -32,9 +32,9 @@ function rememberMyFilms() {
             }
             personalMovieDB.movies[filmName] = filmRating;
             i++;
-        };
-    };
-};
+        }
+    }
+}
 
 function detectPersonalLevel() {
     if (personalMovieDB.count <= 10) {
@@ -45,20 +45,20 @@ function detectPersonalLevel() {
         alert("Вы киноман");
     } else {
         alert("Произошла ошибка");
-    };
-};
+    }
+}
 
 function showMyDB() {
     personalMovieDB.privat || console.log(personalMovieDB);
-};
+}
 
 function writeYourGenres() {
     let i = 1;
     while (i < 4) {
         personalMovieDB.genres.push(prompt(`Ваш любимый жанр под номером ${i++}`, ''));
-    };
+    }
 
-};
+}
 
 start();
 rememberMyFilms();

@@ -38,15 +38,3 @@ let action = +prompt(" Если вы хотите ввести новое уст
 
 
 
-switch (action) {
-
-    case 1: 
-        dataBase.push(new Device(
-        article = prompt("Введите Артикул", ''),
-        nameDevice = prompt("Введите полное название", ''),
-        unit = prompt("Введите единицы", 'pcs'),
-        totalQuantity = +prompt("Введите количество", ''),
-        comment = prompt("Введите комментарий", ''),    
-    ));
-        };
-
