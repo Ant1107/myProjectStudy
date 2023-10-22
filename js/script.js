@@ -53,8 +53,8 @@ function showMyDB() {
 };
 
 function writeYourGenres() {
-    let i = 0;
-    while (i < 3) {
+    let i = 1;
+    while (i < 4) {
         personalMovieDB.genres.push(prompt(`Ваш любимый жанр под номером ${i++}`, ''));
     };
 
