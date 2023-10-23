@@ -13,4 +13,3 @@ for (let i = 0; i < arr.length; i++) {
     obj[arr[i]] = arr2[i];
 }
 
-console.log(obj);
