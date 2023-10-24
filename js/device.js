@@ -1,0 +1,1 @@
+device = {deviceName: '', id: 0, quantity: 0, prop: '', putOnStorage: function(date, quantity) {}, installOnManufacture: function(date, quantity) {}}
