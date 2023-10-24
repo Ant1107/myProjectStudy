@@ -15,22 +15,26 @@ while (c) {
             otvet = +prompt(`${a} + ${b}`);
 
             if (a + b != otvet) {
-                alert(`${a + b}`);
-            };
+                alert(`${a + b}  😿`);
+            } else {
+                alert('🥳 🥳 🥳');
+            }
             break;
         case 1:
             a = Math.round(Math.random() * 10);
             b = Math.round(Math.random() * 10);
             if (a >= b) {
-            otvet = +prompt(`${a} - ${b}`);
-            if (a - b != otvet) {
-                alert(`${a - b}`);
-            }
+                otvet = +prompt(`${a} - ${b}`);
+                if (a - b != otvet) {
+                    alert(`${a - b}  😿`);
+                }
             } else if (a < b) {
                 otvet = +prompt(`${b} - ${a}`);
                 if (b - a != otvet) {
-                    alert(`${b - a}`);
-            }
+                    alert(`${b - a}  😿`);
+                } else {
+                    alert('🥳 🥳 🥳');
+                }
             }
             break;
         case 2:
@@ -38,7 +42,9 @@ while (c) {
             b = Math.round((Math.random() * 2) + 1);
             otvet = +prompt(`${a} * ${b}`);
             if (a * b != otvet) {
-                alert(`${a * b}`);
+                alert(`${a * b}  😿`);
+            } else {
+                alert('🥳 🥳 🥳');
             }
             break;
     }
