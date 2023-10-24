@@ -1,11 +1,11 @@
-const arr = [1, 2, 3, 54, 55, 66, 77, 21, 34, 56, 67];
+//const arr = [1, 2, 3, 54, 55, 66, 77, 21, 34, 56, 67];
 //console.log(arr.sort((a, b) => b - a));
 //метод forEach - метод перебора,
 //метод map, reduce, filter, map - методы модификаторы,
 //методы pop, push, shift, unshift, split, join, slice
 //псевдомассивы - массивы не имеющие методов.
 
-const arr2 = [1, 2, 3, 54, 55, 66, 77, 21, 34, 56, 67];
+//const arr2 = [1, 2, 3, 54, 55, 66, 77, 21, 34, 56, 67];
 
 // const ob = new Object();
 
@@ -39,17 +39,4 @@ const obj = {
 
 // console.log(obj5)
 
-const objCopy = {
-    weigth1: '1024px',
-    height2: '768px',
-    color3: 'black',
-    background4: 'red',
-    border5: 'green'
-}
 
-const newObj = {...obj, ...objCopy};
-console.log(newObj)
-
-const n = 10;
-const num = new Boolean(n);
-num.valueOf()

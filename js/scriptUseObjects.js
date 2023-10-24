@@ -17,18 +17,16 @@
 // Код возьмите из предыдущего домашнего задания
 
 const personalMovieDB = {
-    count: null,
+    count: 0,
     movies: {},
     actors: {},
     genres: [],
     privat: false,
     start: function () {
-        let numberOfFilms;
-        numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", '');
-        while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
-            numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", '');
+        personalMovieDB.count = +prompt("Сколько фильмов вы уже посмотрели?", '');
+        while (personalMovieDB.count == '' || personalMovieDB.count == null || isNaN(personalMovieDB.count)) {
+            personalMovieDB.count = +prompt("Сколько фильмов вы уже посмотрели?", '');
         }
-        personalMovieDB.count = numberOfFilms;
     },
     rememberMyFilms: function () {
 
