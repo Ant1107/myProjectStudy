@@ -1,0 +1,91 @@
+/* Задание на урок:
+
+1) У нас уже есть рабочее приложение, состоящее из отдельных функций. Представьте, что
+перед вами стоит задача переписать его так, чтобы все функции стали методами объекта personalMovieDB
+Такое случается в реальных продуктах при смене технологий или подхода к архитектуре программы
+
+2) Создать метод toggleVisibleMyDB, который при вызове будет проверять свойство privat. Если оно false - он
+переключает его в true, если true - переключает в false. Протестировать вместе с showMyDB.
+
+3) В методе writeYourGenres запретить пользователю нажать кнопку "отмена" или оставлять пустую строку. 
+Если он это сделал - возвращать его к этому же вопросу. После того, как все жанры введены - 
+при помощи метода forEach вывести в консоль сообщения в таком виде:
+"Любимый жанр #(номер по порядку, начиная с 1) - это (название из массива)"*/
+
+'use strict';
+
+// Код возьмите из предыдущего домашнего задания
+
+const personalMovieDB = {
+    count: null,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false,
+    start: function () {
+        let numberOfFilms;
+        numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", '');
+        while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+            numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", '');
+        }
+        personalMovieDB.count = numberOfFilms;
+    },
+    rememberMyFilms: function () {
+
+        let filmName;
+        let filmRating;
+
+        for (let i = 0; i < personalMovieDB.count;) {
+            filmName = prompt("Один из последних просмотренных фильмов", '');
+            if (filmName == '' || filmName == null || filmName.length > 50) {
+                continue;
+            } else {
+                filmRating = prompt("На сколько оцените его?", '');
+                if (filmRating == '' || filmRating == null || filmRating.length > 50) {
+                    continue;
+                }
+                personalMovieDB.movies[filmName] = filmRating;
+                i++;
+            }
+        }
+    },
+    detectPersonalLevel: function () {
+        if (personalMovieDB.count <= 10) {
+            alert("Просмотрено довольно мало фильмов");
+        } else if (personalMovieDB.count < 30 && personalMovieDB.count > 10) {
+            alert("Вы классический зритель");
+        } else if (personalMovieDB.count > 30) {
+            alert("Вы киноман");
+        } else {
+            alert("Произошла ошибка");
+        }
+    },
+    showMyDB: function () {
+        personalMovieDB.privat && console.log(personalMovieDB);
+    },
+    writeYourGenres: function () {
+        let i = 1;
+        let likeGenre;
+        while (i < 4) {
+            likeGenre = prompt(`Ваш любимый жанр под номером ${i}`, '')
+            if (likeGenre == '' || likeGenre == null) {
+                continue;
+            }
+            i++;
+            personalMovieDB.genres.push(likeGenre);
+        }
+        personalMovieDB.genres.forEach((value, index) => console.log(`Любимый жанр #${index+1} - это ${value}`))
+
+    },
+    toggleVisibleMyDB: function () {
+        if (!personalMovieDB.privat) {
+            personalMovieDB.privat = true;
+        } else {
+            personalMovieDB.privat = false;
+        }
+    }
+};
+
+personalMovieDB.toggleVisibleMyDB();
+personalMovieDB.showMyDB();
+personalMovieDB.writeYourGenres();
