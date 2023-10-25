@@ -40,22 +40,4 @@ const obj = {
 // console.log(obj5)
 
 
-const arrObj = new Array(1, 2, 3, 4, 5)
-
-const setObj = new Set([1, 2, 3, 4, 5])
-
-const strObj = new String("qwerty")
-
-const numObj = new Number(1234567890)
-
-const boolObj = new Boolean('')
-
-console.log(arrObj)
-console.log(setObj)
-console.log(strObj)
-console.log(numObj)
-console.log(boolObj)
-
-
-const {weigth, height} = obj;
-console.log(weigth);
+ alert(typeof NaN); 
