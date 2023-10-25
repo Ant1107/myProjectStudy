@@ -55,3 +55,7 @@ console.log(setObj)
 console.log(strObj)
 console.log(numObj)
 console.log(boolObj)
+
+
+const {weigth, height} = obj;
+console.log(weigth);

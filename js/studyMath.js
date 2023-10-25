@@ -2,13 +2,13 @@ let num;
 let answer;
 let a;
 let b;
-let c = Boolean(1);
-let countWrongAnswers;
-let countAnswers;
+
+let countWrongAnswers = 0;
+let countAnswers = 0;
 const wrongAnswers = {};
 
 
-while (c) {
+while (!null) {
     if (answer == 1111) {
         break;
     }
@@ -23,7 +23,7 @@ while (c) {
             if (a + b != answer) {
                 alert(`${a + b}  😿`);
                 countWrongAnswers++;
-                wrongAnswers[String(a) +' + '+ String(b)] = answer;
+                wrongAnswers[a +' + '+ b] = answer;
             } else {
                 alert('🥳 🥳 🥳');
                 countAnswers++;
@@ -37,14 +37,14 @@ while (c) {
                 if (a - b != answer) {
                     alert(`${a - b}  😿`);
                     countWrongAnswers++;
-                    wrongAnswers[String(a) +' - '+ String(b)] = answer;
+                    wrongAnswers[a+' - '+ b] = answer;
                 }
             } else if (a < b) {
                 answer = +prompt(`${b} - ${a}`);
                 if (b - a != answer) {
                     alert(`${b - a}  😿`);
                     countWrongAnswers++;
-                    wrongAnswers[String(b) +' - '+ String(a)] = answer;
+                    wrongAnswers[b +' - '+ a] = answer;
                 } else {
                     alert('🥳 🥳 🥳');
                     countAnswers++;
@@ -58,7 +58,7 @@ while (c) {
             if (a * b != answer) {
                 alert(`${a * b}  😿`);
                 countWrongAnswers++;
-                wrongAnswers[String(a) +' * '+ String(b)] = answer;
+                wrongAnswers[a +' * '+ b] = answer;
             } else {
                 alert('🥳 🥳 🥳');
                 countAnswers++;
@@ -67,9 +67,11 @@ while (c) {
     }
 }
 
-if (countAnswers - countWrongAnswers > 10) {
+if (countAnswers - (countWrongAnswers - 1) > 2) {
     alert('Ты победил!🥳 🥳 🥳 🥳 🥳 🥳 🥳 🥳 🥳 🥳 🥳 🥳 🥳 🥳 🥳')
 } else {
     alert('Ты проиграл 😿 😿 😿 😿 😿 😿 😿 😿 😿 😿 😿 😿 😿 😿 😿')
 }
+
 alert(JSON.stringify(wrongAnswers));
+
