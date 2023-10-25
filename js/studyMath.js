@@ -73,5 +73,5 @@ if (countAnswers - (countWrongAnswers - 1) > 2) {
     alert('Ты проиграл 😿 😿 😿 😿 😿 😿 😿 😿 😿 😿 😿 😿 😿 😿 😿')
 }
 
-alert(JSON.stringify(wrongAnswers));
 alert(`Правильных ответов: ${countAnswers}   \nНе правильных ответов: ${countWrongAnswers}`);
+alert(JSON.stringify(wrongAnswers));
