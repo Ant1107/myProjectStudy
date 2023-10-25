@@ -74,4 +74,4 @@ if (countAnswers - (countWrongAnswers - 1) > 2) {
 }
 
 alert(JSON.stringify(wrongAnswers));
-
+alert(`Правильных ответов: ${countAnswers}   \nНе правильных ответов: ${countWrongAnswers}`);
