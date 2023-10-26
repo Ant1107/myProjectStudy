@@ -40,4 +40,3 @@ const obj = {
 // console.log(obj5)
 
 
- alert(typeof NaN); 
