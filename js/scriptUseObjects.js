@@ -87,3 +87,5 @@ const personalMovieDB = {
 personalMovieDB.toggleVisibleMyDB();
 personalMovieDB.showMyDB();
 personalMovieDB.writeYourGenres();
+
+[].length
